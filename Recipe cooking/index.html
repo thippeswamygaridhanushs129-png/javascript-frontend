@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RecipeJS - Your Functional Cooking Companion</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>RecipeJS App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>🍳 RecipeJS</h1>
-        <p>Your Functional Cooking Companion</p>
-    </header>
+<header>
+  <h1>🍽 RecipeJS</h1>
 
-    <main>
-        <div id="recipe-container">
-            <!-- Recipe cards will be rendered here by JavaScript -->
-        </div>
-    </main>
+  <div class="search-box">
+    <input id="search-input" placeholder="Search recipes or ingredients...">
+    <button id="clear-search">✖</button>
+  </div>
 
-    <script src="app.js"></script>
+  <div class="controls">
+    <button data-filter="all">All</button>
+    <button data-filter="veg">Veg</button>
+    <button data-filter="nonveg">Non-Veg</button>
+    <button data-filter="favorites">❤️ Favorites</button>
+
+    <select id="sort-select">
+      <option value="default">Default</option>
+      <option value="az">A → Z</option>
+      <option value="za">Z → A</option>
+    </select>
+  </div>
+</header>
+
+<main>
+  <p id="recipe-counter"></p>
+  <div id="recipe-container"></div>
+</main>
+
+<script src="app.js"></script>
 </body>
 </html>
