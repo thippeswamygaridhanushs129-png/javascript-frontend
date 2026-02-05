@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RecipeJS App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🍽 RecipeJS</h1>
+
+  <div class="search-box">
+    <input id="search-input" placeholder="Search recipes or ingredients...">
+    <button id="clear-search">✖</button>
+  </div>
+
+  <div class="controls">
+    <button data-filter="all">All</button>
+    <button data-filter="veg">Veg</button>
+    <button data-filter="nonveg">Non-Veg</button>
+    <button data-filter="favorites">❤️ Favorites</button>
+
+    <select id="sort-select">
+      <option value="default">Default</option>
+      <option value="az">A → Z</option>
+      <option value="za">Z → A</option>
+    </select>
+  </div>
+</header>
+
+<main>
+  <p id="recipe-counter"></p>
+  <div id="recipe-container"></div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
